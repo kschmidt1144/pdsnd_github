@@ -84,16 +84,16 @@ def time_stats(df):
 
     # display the most common month
     most_common_month = df['month'].mode()[0]
-    print(f"The most common month is: {most_common_month}")
+    print(f"The most common month in the dataset is: {most_common_month}")
 
     # display the most common day of week
     most_common_day = df['day_of_week'].mode()[0]
-    print(f"The most common day of week is: {most_common_day}")
+    print(f"The most common day of week in the dataset is: {most_common_day}")
 
     # display the most common start hour
     df['hour'] = df['Start Time'].dt.hour
     most_common_hour = df['hour'].mode()[0]
-    print(f"The most common start hour is: {most_common_hour}")
+    print(f"The most common start hour in the dataset is: {most_common_hour}")
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -126,17 +126,17 @@ def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
 
     print('\nCalculating Trip Duration...\n')
-    start_time = time.time()
+    start = time.time()
 
     # display total travel time
-    total_travel_time = df['Trip Duration'].sum()
-    print(f"Total travel time: {total_travel_time:.2f} seconds")
+    total = df['Trip Duration'].sum()
+    print(f"Total travel time: {total:.2f} seconds")
 
     # display mean travel time
-    mean_travel_time = df['Trip Duration'].mean()
-    print(f"Mean travel time: {mean_travel_time:.2f} seconds")
+    mean = df['Trip Duration'].mean()
+    print(f"Mean travel time: {mean:.2f} seconds")
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    print("\nThis took %s seconds." % (time.time() - start))
     print('-'*40)
 
 
