@@ -32,7 +32,7 @@ Calculates and displays statistics about the most popular stations and trip:
 ## trip_duration_stats(df)
 Calculates and displays statistics on the total and average trip duration:
 - Calculates and prints the total travel time
-- Calculates and prints the mean travel time
+- Prints the mean travel time
 
 ## user_stats(df)
 Displays statistics on bikeshare users:
